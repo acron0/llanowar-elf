@@ -11,7 +11,6 @@ def handleGameStateEvent(logger, event):
     #logger.debug("Event: {0}".format(event))
     pass
 
-
 def handleConnectionResponse(logger, event):
     sendMessage('player_deck_list', deck_list=event["connectResp"]["deckMessage"]["deckCards"])
 
@@ -35,7 +34,7 @@ class MTGAInterpreter:
                         handleConnectionResponse(self.logger, msg)
                     else:
                         pass
-                        #self.logger.debug("Unhandled message type: {0}".format(msg['type']))
+                        self.logger.debug("Unhandled message type: {0}".format(msg['type']))
         
     def handleLine(self, line):
         if self.opening_line is None:

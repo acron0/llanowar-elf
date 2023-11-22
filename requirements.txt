@@ -1,4 +1,4 @@
+prettytable==3.9.0
 Pypubsub==4.0.3
 requests==2.31.0
 tailer==0.4.1
-

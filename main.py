@@ -42,10 +42,7 @@ def run():
     except (KeyboardInterrupt, SystemExit):
         logger.info('Received keyboard interrupt, quitting.')
 
-    # 
-    # gs = GameState()
-    # gs.run()
-
+    print(board)
 
 if __name__ == '__main__':
     run()
