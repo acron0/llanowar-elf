@@ -1,6 +1,6 @@
 import time
 import requests
-from log import getLogger
+from .log import getLogger
 
 DEBOUNCE_MS = 75
 

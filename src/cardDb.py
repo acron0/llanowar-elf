@@ -1,7 +1,7 @@
 import json
 import threading
-from log import getLogger
-from mtgCard import MTGCard
+from .log import getLogger
+from .mtgCard import MTGCard
 
 CARD_CACHE_FILE_NAME = '.card_cache.json'
 

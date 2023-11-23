@@ -1,6 +1,6 @@
 import os
 import configparser
-from log import getLogger
+from .log import getLogger
 import platform
 class LogPathFinder:
     def __init__(self, ):

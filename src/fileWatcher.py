@@ -1,6 +1,6 @@
 import json
-from log import getLogger
-from ps import handleMessage, sendMessage
+from .log import getLogger
+from .ps import handleMessage, sendMessage
 import tailer
 
 

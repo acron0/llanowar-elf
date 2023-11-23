@@ -1,12 +1,12 @@
 import platform
 
-from fileWatcher import FileWatcher
-from log import getLogger
-from logPathFinder import LogPathFinder
-from mtgaBoardState import MTGABoardState
-from mtgaCardDb import MTGACardDB
-from mtgaInterpreter import MTGAInterpreter
-from scryfallApi import ScryfallAPI
+from src.fileWatcher import FileWatcher
+from src.log import getLogger
+from src.logPathFinder import LogPathFinder
+from src.boardState import MTGABoardState
+from src.cardDb import MTGACardDB
+from src.mtgaInterpreter import MTGAInterpreter
+from src.scryfallApi import ScryfallAPI
 
 log_path_override = 'example.log'
 watch_mode = 'head'

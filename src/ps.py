@@ -1,5 +1,5 @@
 from pubsub import pub
-from log import getLogger
+from .log import getLogger
 
 logger = getLogger('pubsub')
 trace = False
