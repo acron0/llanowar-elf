@@ -41,4 +41,4 @@ class MTGACardDB():
             card = self.api.fetchFromApi(cardId)
             self.card_cache[cardIdStr] = card
             self.scheduleCardCacheWrite()
-            return card
+            return MTGCard(card)

@@ -42,18 +42,16 @@ class MTGAInterpreter:
         match = match_game_room_state_changed_event_regex.match(opening_line)
         if match is not None:
             player_id = match.group(1)
-            opponent_id = None
-            player_seat = None
-            opponent_seat = None
+            player = None
+            opponent = None
 
-            players = data["matchGameRoomStateChangedEvent"]["gameRoomInfo"]["players"]
-            for player in players:
-                if player["userId"] != player_id:
-                    opponent_id = player["userId"]
-                    opponent_seat = player["systemSeatId"]
+            players = data["matchGameRoomStateChangedEvent"]["gameRoomInfo"]["gameRoomConfig"]["reservedPlayers"]
+            for p in players:
+                if p["userId"] != player_id:
+                    opponent = p
                 else:
-                    player_seat = player["systemSeatId"]
-            sendMessage('participants_identified', player={'id': player_id, 'seat': player_seat}, opponent={'id': opponent_id, 'seat': opponent_seat})
+                    player = p
+            sendMessage('participants_identified', player=player, opponent=opponent)
 
         
     def handleNewLogData(self, opening_line, data=None):
